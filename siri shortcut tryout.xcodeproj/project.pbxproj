@@ -12,6 +12,7 @@
 		52E76096212D739D00137843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E76094212D739D00137843 /* Main.storyboard */; };
 		52E76098212D739F00137843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E76097212D739F00137843 /* Assets.xcassets */; };
 		52E7609B212D739F00137843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E76099212D739F00137843 /* LaunchScreen.storyboard */; };
+		52E760A5212D74A000137843 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E760A4212D74A000137843 /* Intents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		52E76097212D739F00137843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E7609A212D739F00137843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E7609C212D739F00137843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52E760A2212D73BC00137843 /* siri shortcut tryout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "siri shortcut tryout.entitlements"; sourceTree = "<group>"; };
+		52E760A4212D74A000137843 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E760A5212D74A000137843 /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				52E7608F212D739D00137843 /* siri shortcut tryout */,
 				52E7608E212D739D00137843 /* Products */,
+				52E760A3212D74A000137843 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		52E7608F212D739D00137843 /* siri shortcut tryout */ = {
 			isa = PBXGroup;
 			children = (
+				52E760A2212D73BC00137843 /* siri shortcut tryout.entitlements */,
 				52E76090212D739D00137843 /* AppDelegate.swift */,
 				52E76092212D739D00137843 /* ViewController.swift */,
 				52E76094212D739D00137843 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				52E7609C212D739F00137843 /* Info.plist */,
 			);
 			path = "siri shortcut tryout";
+			sourceTree = "<group>";
+		};
+		52E760A3212D74A000137843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52E760A4212D74A000137843 /* Intents.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,11 @@
 				TargetAttributes = {
 					52E7608C212D739D00137843 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -282,7 +301,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "siri shortcut tryout/siri shortcut tryout.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z5PHSF7R6;
 				INFOPLIST_FILE = "siri shortcut tryout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,7 +320,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "siri shortcut tryout/siri shortcut tryout.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z5PHSF7R6;
 				INFOPLIST_FILE = "siri shortcut tryout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
